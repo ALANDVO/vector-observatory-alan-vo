@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "name": "vector-observatory-alan-vo",
+  "owner": "ALANDVO",
+  "email": "alanvo@gmail.com",
+  "domain": "AI/ML developer tools",
+  "summary": "Work in progress: vector-observatory-alan-vo",
+  "workflows": [
+    "Browse and search plugin/skill catalog with filtering by stability, plugin, and tags",
+    "Import plugins from reference GitHub repository with automated metadata extraction",
+    "Analyze Chinese content for AI-generated patterns using deterministic offline rules engine",
+    "Track and triage GitHub issues with AI-assisted labeling and priority suggestions"
+  ],
+  "auth": "oidc-keycloak-saml-broker",
+  "llm_providers": [
+    "openai-compatible",
+    "anthropic",
+    "gemini",
+    "ollama"
+  ],
+  "status": "work-in-progress"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "current_feature": "skeleton",
+  "features": [
+    {
+      "id": "skeleton",
+      "title": "FastAPI/React skeleton with install instructions and tests",
+      "status": "done",
+      "acceptance": [
+        "Backend FastAPI app starts and responds to /health",
+        "Frontend Vite/React app builds and serves",
+        "Docker compose brings up backend + frontend + Keycloak",
+        "README has install/run/test steps",
+        "pytest and vitest run without errors"
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "backend/requirements.txt",
+        "backend/Dockerfile",
+        "frontend/package.json",
+        "frontend/src/main.tsx",
+        "frontend/src/App.tsx",
+        "compose.yaml",
+        "README.md",
+        ".gitignore",
+        ".env.example",
+        "pyproject.toml",
+        "LICENSE",
+        "CHANGELOG.md",
+        "portfolio.json"
+      ],
+      "tests": [
+        "backend/tests/test_health.py",
+        "frontend/src/__tests__/App.test.tsx"
+      ]
+    },
+    {
+      "id": "skill-catalog",
+      "title": "Plugin/skill catalog with search and detail view",
+      "status": "planned",
+      "acceptance": [
+        "Backend stores plugins and skills in SQLite",
+        "API supports pagination, filtering, search",
+        "Frontend displays searchable catalog with detail view",
+        "At least 3 workflows: browse, search, import from reference URL"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "issue-tracker",
+      "title": "GitHub issue ingestion and triage workflow",
+      "status": "planned",
+      "acceptance": [
+        "Backend fetches and stores issues from reference repo",
+        "Frontend shows issue list with filtering by plugin/label",
+        "AI-assisted triage suggestions (opt-in, labeled advisory)"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "quality-analysis",
+      "title": "Content quality analysis engine (Chinese anti-slop detection)",
+      "status": "planned",
+      "acceptance": [
+        "Deterministic offline analyzer for Chinese AI patterns",
+        "API endpoint returns structured quality report",
+        "Frontend workflow: paste text -> get quality score + suggestions"
+      ],
+      "implementation": [],
+      "tests": []
+    }
+  ]
+}

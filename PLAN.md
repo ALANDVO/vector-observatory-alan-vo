@@ -25,13 +25,17 @@ Tests: `backend/tests/test_health.py`, `frontend/src/__tests__/App.test.tsx`
 
 ### skill-catalog — Plugin/skill catalog with search and detail view
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - Backend stores plugins and skills in SQLite
 - API supports pagination, filtering, search
 - Frontend displays searchable catalog with detail view
 - At least 3 workflows: browse, search, import from reference URL
+
+Implementation: `backend/app/models/plugin.py`, `backend/app/schemas/plugin.py`, `backend/app/api/plugins.py`, `backend/app/db/init_db.py`, `backend/app/main.py`
+
+Tests: `backend/tests/test_plugins.py`
 
 ### issue-tracker — GitHub issue ingestion and triage workflow
 

@@ -55,3 +55,4 @@ coverage/
 # Test artifacts
 *.xml
 *.report
+venv/

@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
 import { Dashboard } from './components/Dashboard'
 import { HealthCheck } from './components/HealthCheck'
+import { PluginList } from './components/PluginList'
+import { PluginDetail } from './components/PluginDetail'
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/health" element={<HealthCheck />} />
+          <Route path="/plugins" element={<PluginList />} />
+          <Route path="/plugins/:pluginId" element={<PluginDetail />} />
         </Routes>
       </main>
       <footer className="app-footer">

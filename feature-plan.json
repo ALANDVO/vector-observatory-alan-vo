@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "skeleton",
+  "current_feature": "skill-catalog",
   "features": [
     {
       "id": "skeleton",
@@ -37,7 +37,7 @@
     {
       "id": "skill-catalog",
       "title": "Plugin/skill catalog with search and detail view",
-      "status": "in_progress",
+      "status": "done",
       "acceptance": [
         "Backend stores plugins and skills in SQLite",
         "API supports pagination, filtering, search",
@@ -49,10 +49,16 @@
         "backend/app/schemas/plugin.py",
         "backend/app/api/plugins.py",
         "backend/app/db/init_db.py",
-        "backend/app/main.py"
+        "backend/app/main.py",
+        "frontend/src/components/PluginList.tsx",
+        "frontend/src/components/PluginDetail.tsx",
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
       ],
       "tests": [
-        "backend/tests/test_plugins.py"
+        "backend/tests/test_plugins.py",
+        "frontend/src/__tests__/PluginList.test.tsx",
+        "frontend/src/__tests__/PluginDetail.test.tsx"
       ]
     },
     {

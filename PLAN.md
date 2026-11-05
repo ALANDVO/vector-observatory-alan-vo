@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-skeleton
+skill-catalog
 
 ## Roadmap
 
@@ -25,7 +25,7 @@ Tests: `backend/tests/test_health.py`, `frontend/src/__tests__/App.test.tsx`
 
 ### skill-catalog — Plugin/skill catalog with search and detail view
 
-Status: in_progress
+Status: done
 
 Acceptance:
 - Backend stores plugins and skills in SQLite
@@ -33,9 +33,9 @@ Acceptance:
 - Frontend displays searchable catalog with detail view
 - At least 3 workflows: browse, search, import from reference URL
 
-Implementation: `backend/app/models/plugin.py`, `backend/app/schemas/plugin.py`, `backend/app/api/plugins.py`, `backend/app/db/init_db.py`, `backend/app/main.py`
+Implementation: `backend/app/models/plugin.py`, `backend/app/schemas/plugin.py`, `backend/app/api/plugins.py`, `backend/app/db/init_db.py`, `backend/app/main.py`, `frontend/src/components/PluginList.tsx`, `frontend/src/components/PluginDetail.tsx`, `frontend/src/App.tsx`, `frontend/src/index.css`
 
-Tests: `backend/tests/test_plugins.py`
+Tests: `backend/tests/test_plugins.py`, `frontend/src/__tests__/PluginList.test.tsx`, `frontend/src/__tests__/PluginDetail.test.tsx`
 
 ### issue-tracker — GitHub issue ingestion and triage workflow
 

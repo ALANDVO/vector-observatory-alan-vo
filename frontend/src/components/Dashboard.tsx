@@ -94,8 +94,8 @@ export function Dashboard() {
         <h2>Quick Actions</h2>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <Link to="/health" className="btn btn-primary">Detailed Health</Link>
-          <button className="btn btn-secondary" disabled>Browse Plugins (Coming Soon)</button>
-          <button className="btn btn-secondary" disabled>Search Skills (Coming Soon)</button>
+          <Link to="/plugins" className="btn btn-primary">Browse Plugins</Link>
+          <Link to="/plugins" className="btn btn-secondary">Search Skills</Link>
         </div>
       </div>
 

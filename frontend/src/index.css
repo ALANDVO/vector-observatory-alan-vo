@@ -151,3 +151,509 @@ body {
   border-radius: 6px;
   margin-bottom: 1rem;
 }
+
+/* Plugin List Styles */
+.plugin-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.plugin-list-header h2 {
+  margin: 0;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-width: 250px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
+}
+
+.search-btn, .clear-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-btn {
+  background: #2b6cb0;
+  color: white;
+}
+
+.search-btn:hover {
+  background: #1e3a5f;
+}
+
+.clear-btn {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.clear-btn:hover {
+  background: #cbd5e0;
+}
+
+.tag-filters {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.tag-label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: #4a5568;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag-btn {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 9999px;
+  background: white;
+  color: #4a5568;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tag-btn:hover {
+  border-color: #2b6cb0;
+  color: #2b6cb0;
+}
+
+.tag-btn.active {
+  background: #2b6cb0;
+  border-color: #2b6cb0;
+  color: white;
+}
+
+.tag-btn.clear-tag {
+  background: #fed7d7;
+  border-color: #fc8181;
+  color: #c53030;
+}
+
+.tag-btn.clear-tag:hover {
+  background: #fc8181;
+  color: white;
+}
+
+.plugins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.plugin-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: all 0.2s;
+}
+
+.plugin-card:hover {
+  border-color: #2b6cb0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.plugin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.plugin-name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.plugin-version {
+  font-size: 0.75rem;
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.plugin-description {
+  margin: 0 0 1rem;
+  color: #4a5568;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.plugin-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.plugin-author {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.plugin-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.tag.more {
+  background: #e2e8f0;
+  color: #718096;
+}
+
+.plugin-skills-preview {
+  padding-top: 0.75rem;
+  border-top: 1px solid #edf2f7;
+}
+
+.skill-count {
+  font-size: 0.875rem;
+  color: #2b6cb0;
+  font-weight: 500;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+  font-size: 1.125rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.page-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  background: white;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: #2b6cb0;
+  border-color: #2b6cb0;
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.retry-btn {
+  margin-top: 1rem;
+}
+
+/* Plugin Detail Styles */
+.plugin-detail {
+  max-width: 900px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #2b6cb0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.plugin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.plugin-title-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.plugin-title-section h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #1a202c;
+}
+
+.plugin-version {
+  font-size: 1rem;
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px.
+}
+
+.plugin-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.plugin-status.active {
+  background: #c6f6d5;
+  color: #276749;
+}
+
+.plugin-status.inactive {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.plugin-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.external-link {
+  padding: 0.5rem 1rem;
+  background: #2b6cb0;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.external-link:hover {
+  background: #1e3a5f;
+}
+
+.plugin-description {
+  margin-bottom: 2rem;
+}
+
+.plugin-description h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #1a202c.
+}
+
+.plugin-description p {
+  margin: 0;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+.plugin-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #718096.
+}
+
+.meta-value {
+  color: #1a202c;
+  font-weight: 500;
+}
+
+.plugin-tags-section {
+  margin-bottom: 2rem;
+}
+
+.plugin-tags-section h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #1a202c.
+}
+
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.plugin-skills h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #1a202c.
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.skill-name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600.
+  color: #1a202c.
+}
+
+.skill-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  text-transform: uppercase.
+}
+
+.skill-status.active {
+  background: #c6f6d5;
+  color: #276749.
+}
+
+.skill-status.inactive {
+  background: #fed7d7;
+  color: #c53030.
+}
+
+.skill-description {
+  margin: 0 0 1rem;
+  color: #4a5568;
+  line-height: 1.5.
+}
+
+.skill-schemas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem.
+}
+
+.schema-detail {
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden.
+}
+
+.schema-detail summary {
+  padding: 0.5rem 0.75rem;
+  background: #f7fafc;
+  font-weight: 600.
+  font-size: 0.875rem;
+  cursor: pointer;
+  color: #4a5568.
+}
+
+.schema-detail summary:hover {
+  background: #edf2f7.
+}
+
+.schema-pre {
+  margin: 0;
+  padding: 0.75rem;
+  background: #1a202c;
+  color: #e2e8f0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  max-height: 200px;
+  overflow-y: auto.
+}
+
+.no-skills {
+  text-align: center;
+  padding: 2rem;
+  color: #718096.
+}

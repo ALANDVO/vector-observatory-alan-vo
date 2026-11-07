@@ -305,3 +305,7 @@ See [LICENSE](LICENSE) for full text.
 ---
 
 *Vector Observatory — Alan Vo | AI & Machine Learning*
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

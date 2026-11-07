@@ -55,3 +55,6 @@ Acceptance:
 - API endpoint returns structured quality report
 - Frontend workflow: paste text -> get quality score + suggestions
 
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

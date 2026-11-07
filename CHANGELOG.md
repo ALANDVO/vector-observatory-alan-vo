@@ -49,3 +49,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CORS configuration for development origins
 - Keycloak OIDC configuration with PKCE support
 
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

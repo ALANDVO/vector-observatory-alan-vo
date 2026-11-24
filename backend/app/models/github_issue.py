@@ -29,7 +29,6 @@ class GitHubIssue(Base):
     triage_score = Column(Integer, nullable=True)  # AI quality score
     triage_notes = Column(Text, nullable=True)  # AI advisory notes
 
-    plugin_assignments = relationship("PluginAssignment", back_populates="github_issue", cascade="all, delete-orphan")
 
     __table_args__ = (
         Index("ix_githubissues_repo_number", "repository", "number"),

@@ -1,6 +1,7 @@
 """GitHub Issue API endpoints."""
 
-from typing import List, Optional
+from typing import List, Optional, Dict
+import httpx
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
@@ -52,13 +53,13 @@ async def list_github_issues(
     )
 
 
-@router.post("/ingest/{repo}", status_code=202)
+@router.post("/ingest/{repo:path}", status_code=202)
 async def ingest_github_issues(
     repo: str,
     page: int = 1,
     per_page: int = 30,
     state: str = "open",
-) -> {"message": str, "fetched": int, "stored": int}:
+) -> Dict[str, int]:
     """Fetch and store GitHub issues from a reference repository.
     
     This endpoint triggers the GitHub API to fetch issues from the

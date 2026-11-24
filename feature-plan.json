@@ -64,13 +64,19 @@
     {
       "id": "issue-tracker",
       "title": "GitHub issue ingestion and triage workflow",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance": [
         "Backend fetches and stores issues from reference repo",
         "Frontend shows issue list with filtering by plugin/label",
         "AI-assisted triage suggestions (opt-in, labeled advisory)"
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/api/github_issue.py - FastAPI routes for issue listing and ingestion",
+        "backend/app/services/github_issue.py - Service to fetch and store issues from GitHub API",
+        "backend/app/models/github_issue.py - SQLAlchemy model for GitHub issues",
+        "backend/app/schemas/github_issue.py - Pydantic schemas for issue CRUD and triage",
+        "backend/app/main.py - FastAPI app with /api/v1 prefix routing"
+      ],
       "tests": []
     },
     {

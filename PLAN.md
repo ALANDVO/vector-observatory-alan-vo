@@ -39,12 +39,14 @@ Tests: `backend/tests/test_plugins.py`, `frontend/src/__tests__/PluginList.test.
 
 ### issue-tracker — GitHub issue ingestion and triage workflow
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - Backend fetches and stores issues from reference repo
 - Frontend shows issue list with filtering by plugin/label
 - AI-assisted triage suggestions (opt-in, labeled advisory)
+
+Implementation: `backend/app/api/github_issue.py - FastAPI routes for issue listing and ingestion`, `backend/app/services/github_issue.py - Service to fetch and store issues from GitHub API`, `backend/app/models/github_issue.py - SQLAlchemy model for GitHub issues`, `backend/app/schemas/github_issue.py - Pydantic schemas for issue CRUD and triage`, `backend/app/main.py - FastAPI app with /api/v1 prefix routing`
 
 ### quality-analysis — Content quality analysis engine (Chinese anti-slop detection)
 

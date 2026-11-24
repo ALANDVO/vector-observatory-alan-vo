@@ -59,11 +59,14 @@ from app.api.health import router as health_router
 def create_app() -> FastAPI:
     """Create and configure the FastAPI application."""
     app = FastAPI(
-        title="Vector Observatory API",
-        version="1.3.1",
+        title="Vector Observatory",
         description="Alan Vo | Work in progress: vector-observatory-alan-vo",
+        version="1.0.0",
+        docs_url="/docs" if settings.ENVIRONMENT != "production" else None,
+        redoc_url="/redoc" if settings.ENVIRONMENT != "production" else None,
+        lifespan=lifespan,
     )
-    
+
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.CORS_ORIGINS,
@@ -71,12 +74,11 @@ def create_app() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
-    
-    # Register routers
-    app.include_router(health_router)
-    app.include_router(plugins_router)
-    app.include_router(github_issue_router)
-    
+
+    app.include_router(health_router, prefix="/api/v1", tags=["health"])
+    app.include_router(plugins_router, prefix="/api/v1", tags=["plugins"])
+    app.include_router(github_issue_router, prefix="/api/v1", tags=["github-issues"])
+
     return app
 
 

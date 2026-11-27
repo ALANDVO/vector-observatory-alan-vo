@@ -121,4 +121,4 @@ async def trigger_triage(
             detail=f"Issue {issue_id} not found",
         )
     
-    return await get_triage_suggestion(issue)
+    return await get_triage_suggestion(issue, db_session=db_session)

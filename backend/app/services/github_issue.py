@@ -5,6 +5,7 @@ import httpx
 from typing import List, Optional
 
 from app.db.session import SessionLocal
+from sqlalchemy.orm import Session
 from app.models.github_issue import GitHubIssue
 from app.schemas.github_issue import (
     GitHubIssueCreate,
@@ -146,13 +147,16 @@ async def store_issue_from_payload(
         return github_issue
 
 
-async def get_triage_suggestion(issue: GitHubIssue) -> TriageSuggestion:
+async def get_triage_suggestion(
+    issue: GitHubIssue,
+    db_session: Session,
+) -> TriageSuggestion:
     """Get AI-assisted triage suggestion for an issue (opt-in).
     
     Uses LLM to analyze the issue and suggest a label and priority.
     Only runs if issue is not already triaged.
     """
-    from app.schemas.github_issue import TriageSuggestion
+    from app.db.session import SessionLocal
     
     if issue.triaged:
         return TriageSuggestion(
@@ -202,7 +206,7 @@ async def get_triage_suggestion(issue: GitHubIssue) -> TriageSuggestion:
     issue.triaged = True
     issue.triage_score = int(confidence * 10)
     issue.triage_notes = reasoning
-    db.commit()
+    db_session.commit()
     
     return TriageSuggestion(
         issue_id=issue.id,
